@@ -1,0 +1,49 @@
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 65%;
+    flex-direction: row;
+    border-radius: 2.5rem;
+    align-items: stretch;
+    padding: 4rem;
+    gap: 2rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 30%), 
+                 0px 20px 30px rgba(0, 0, 0, 50%);
+
+    .input {
+      width: 100%;
+      padding: 0 3.5rem 1.6rem;
+      
+
+      .label-wrapper {
+        padding: 1rem 0;
+      }
+
+      .btn-wrapper {
+        .btn {
+          width: 30%;
+        }
+
+        .input-text {
+          width: 30%;
+        }
+      }
+    }
+    .output {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 5rem;
+
+      .line-wrapper {
+        .line-output {
+          margin: 0.5rem 0 2.4rem 0;
+
+          .value {
+            font-size: 4.8rem;
+          }
+        }
+      }
+    }
+  }
+}

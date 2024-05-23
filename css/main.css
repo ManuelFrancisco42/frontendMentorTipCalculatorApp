@@ -22,22 +22,8 @@ html {
 }
 
 body {
-  font-family: font-family;
+  font-family: "Space Mono", sans-serif;
   background-color: hsl(185, 41%, 84%);
-}
-
-/* 
-==========
-Footer rules
-==========
-*/
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }
 
 .container {
@@ -85,6 +71,11 @@ Footer rules
   color: rgb(84, 17, 17);
   font-weight: 700;
   font-size: 1.5rem;
+  opacity: 0;
+}
+.card .input .label-wrapper .show-error-msg {
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
 }
 .card .input .input-text {
   background-color: hsl(185, 41%, 84%);
@@ -133,9 +124,10 @@ Footer rules
 .card .input .btn-wrapper .btn:hover {
   background-color: hsl(189, 41%, 97%);
 }
-.card .input .btn-wrapper .btn.active {
-  background-color: hsl(172, 67%, 45%);
+.card .input .btn-wrapper .btn-active {
+  background-color: hsl(0, 0%, 100%);
   color: hsl(183, 100%, 15%);
+  border: 1px solid hsl(183, 100%, 15%);
 }
 .card .input .btn-wrapper .input-text {
   width: 46%;
@@ -150,7 +142,6 @@ Footer rules
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1.4 0;
 }
 .card .output .line-wrapper .line-output .title {
   color: hsl(0, 0%, 100%);
@@ -183,4 +174,57 @@ Footer rules
 }
 .card .output .btn:hover {
   background-color: hsl(189, 41%, 97%);
+}
+
+/* 
+==========
+Footer rules
+==========
+*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 65%;
+    flex-direction: row;
+    border-radius: 2.5rem;
+    align-items: stretch;
+    padding: 4rem;
+    gap: 2rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3), 0px 20px 30px rgba(0, 0, 0, 0.5);
+  }
+  .card .input {
+    width: 100%;
+    padding: 0 3.5rem 1.6rem;
+  }
+  .card .input .label-wrapper {
+    padding: 1rem 0;
+  }
+  .card .input .btn-wrapper .btn {
+    width: 30%;
+  }
+  .card .input .btn-wrapper .input-text {
+    width: 30%;
+  }
+  .card .output {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem;
+  }
+  .card .output .line-wrapper .line-output {
+    margin: 0.5rem 0 2.4rem 0;
+  }
+  .card .output .line-wrapper .line-output .value {
+    font-size: 4.8rem;
+  }
 }

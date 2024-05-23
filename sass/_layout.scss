@@ -48,6 +48,12 @@ padding: 2.5rem;
                 color: rgb(84, 17, 17);
                 font-weight: 700;
                 font-size: 1.5rem;
+                opacity: 0;
+            }
+
+            .show-error-msg {
+                transition: opacity 1s ease-in-out;
+               opacity: 1;
             }
         }
 
@@ -105,9 +111,10 @@ padding: 2.5rem;
         }
             }
      
-            .btn.active {
-                background-color: $strong-cyan;
+            .btn-active {
+                background-color: $white;
                 color: $very-dark-cyan;
+                border: 1px solid $very-dark-cyan;
             }
 
             .input-text {
@@ -127,7 +134,7 @@ padding: 2.5rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin: 1.4 0;
+          
 
 
             .title {
@@ -169,3 +176,19 @@ padding: 2.5rem;
        }
     }
 }
+
+ 
+/* 
+==========
+Footer rules
+==========
+*/ 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
